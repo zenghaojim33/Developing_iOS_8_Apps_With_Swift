@@ -2705,19 +2705,21 @@ knownOps参数symbol
 561
 00:24:13,910 --> 00:24:14,541
           Now we have.          
-
+现在我们有…
 562
 00:24:14,543 --> 00:24:15,509
            Oh, well.            
-
+噢，等等
 563
 00:24:15,510 --> 00:24:16,476
  I'm gonna take a pause here to 
+在这我先暂停一下
 
 564
 00:24:16,478 --> 00:24:18,845
  talk a little bit about access 
-            control.            
+            control.   
+谈一下access control（接口控制）         
 
 565
 00:24:18,847 --> 00:24:20,697
@@ -2727,40 +2729,45 @@ knownOps参数symbol
 00:24:20,698 --> 00:24:22,548
  Access control is about public 
           and private.          
-
+access control是关于公有和私有
 567
 00:24:22,550 --> 00:24:25,017
              Okay?              
-   What methods in this class   
+   What methods in this class
+在这个类里面什么方法是共有的   
 
 568
 00:24:25,019 --> 00:24:27,353
   are public, in other words,   
    other people can use them,   
-
+换言之，其他人能够使用它
 569
 00:24:27,355 --> 00:24:30,022
     other classes in my code    
      allowed to call them?      
-
+其他类能调用它
 570
 00:24:30,024 --> 00:24:31,189
-  And what things are private?  
+  And what things are private?
+而什么方法是私有的呢  
 
 571
 00:24:31,191 --> 00:24:32,757
   My internal data structures   
-             that I             
+             that I 
+里面的一些内部数据            
 
 572
 00:24:32,759 --> 00:24:34,458
    don't want people messing    
-             with?              
+             with?  
+并不想给别人乱搞            
 
 573
 00:24:34,460 --> 00:24:38,428
     Okay, so the way public     
-        private works in        
+        private works in   
+swift处理公有和私有的方法很有趣     
 
 574
 00:24:38,430 --> 00:24:41,064
@@ -2769,22 +2776,26 @@ knownOps参数symbol
 575
 00:24:41,066 --> 00:24:42,999
    You basically specify the    
-       things you want to       
+       things you want to  
+你只需要在你想要私有化的东西前     
 
 576
 00:24:43,001 --> 00:24:45,935
  be private by putting the word 
-        private on them.        
+        private on them. 
+加上private       
 
 577
 00:24:45,937 --> 00:24:47,569
   If you don't put any word on  
-             them,              
+             them,  
+如果你什么都不加            
 
 578
 00:24:47,571 --> 00:24:50,639
    then they're public inside   
-         your program.          
+         your program.   
+那他们就是在你的程序里公有的       
 
 579
 00:24:50,641 --> 00:24:52,040
@@ -2794,98 +2805,112 @@ knownOps参数symbol
 00:24:52,042 --> 00:24:55,109
    And you only use the word    
  public if you're shipping out, 
+当你想要打包
 
 581
 00:24:55,111 --> 00:24:58,979
   like, a framework of objects  
-      to other people, and      
+      to other people, and
+比如说一些框架或者对象给别人      
 
 582
 00:24:58,981 --> 00:25:02,215
  you want stuff in there to be  
- public outside the framework.  
+ public outside the framework. 
+你希望里面框架里的东西是对外公开的 你才会使用public 
 
 583
 00:25:03,251 --> 00:25:04,684
  So I'm making some framework,  
+我做一些框架
 
 584
 00:25:04,686 --> 00:25:07,153
   a bunch of objects that I'm   
-  trying to sell to people or   
+  trying to sell to people or 
+一些对象想要卖给别人用  
 
 585
 00:25:07,155 --> 00:25:09,555
    I get people to use to do    
          something, and         
-
+别人可以用这些东西做点什么
 586
 00:25:09,557 --> 00:25:12,624
     of course I'm gonna have    
  things where my objects inside 
-
+当然我也希望在框架内部的一些类
 587
 00:25:12,626 --> 00:25:14,192
  my framework can talk to each  
              other.             
-
+可以互相交流
 588
 00:25:14,194 --> 00:25:16,361
  There's no keyword needed for  
-             that.              
+             that.  
+不需要什么密码 
+           
 
 589
 00:25:16,363 --> 00:25:18,229
   Then I'll have things inside  
-        certain objects         
+        certain objects  
+那我可以对这些特定的类加上private       
 
 590
 00:25:18,231 --> 00:25:20,464
  that are private only to that  
-   object, I'll say private.    
+   object, I'll say private.
+让它们私有化    
 
 591
 00:25:20,466 --> 00:25:24,267
  And them some of them might be 
  public that the customer who's 
-
+这样的话顾客就可以用我们框架里面
 592
 00:25:24,269 --> 00:25:27,404
      buying my objects, my      
-      framework, can use.       
+      framework, can use. 
+那些公有的对象      
 
 593
 00:25:27,406 --> 00:25:29,238
   Now, in this class we're not  
    gonna be doing frameworks,   
-
+在这节课我们不会做框架
 594
 00:25:29,240 --> 00:25:30,840
   we don't really have time to  
-        get to that, so         
+        get to that, so      
+我们没有那个时间   
 
 595
 00:25:30,842 --> 00:25:32,508
   we're not gonna be using the  
         keyword public,         
-
+所以我们不需要用public来修饰对象
 596
 00:25:32,510 --> 00:25:34,076
-    we won't ever use that,     
+    we won't ever use that,    
+我们之后都不会用它 
 
 597
 00:25:34,078 --> 00:25:35,510
    because we don't have any    
-          frameworks.           
+          frameworks.      
+因为我们没有什么框架     
 
 598
 00:25:35,512 --> 00:25:37,578
  But we are gonna use private.  
-
+但我们会用private
 599
 00:25:37,580 --> 00:25:39,180
  And, starting with assignment  
-              two,              
+              two,       
+然后，从第二次作业开始       
 
 600
 00:25:40,216 --> 00:25:42,516
